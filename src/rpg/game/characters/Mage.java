@@ -11,6 +11,10 @@ public class Mage extends Player {
     public Mage(int attack, int hp, int initiative) {
         super(attack, hp, initiative);
     }
+    
+    public void attack(Player player, Player enemy) {
+        player.setHp(player.getHp() - enemy.getAttack());
+    }    
 
     @Override
     public int getAttack() {
