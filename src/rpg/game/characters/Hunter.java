@@ -2,10 +2,6 @@ package rpg.game.characters;
 
 import java.util.Random;
 
-/**
- *
- * @author Krystian
- */
 public class Hunter extends Player {
     
     public Hunter(int attack, int hp, int initiative) {
@@ -31,4 +27,11 @@ public class Hunter extends Player {
         } else 
             return 1;
     }        
+
+    @Override
+    public void promotion() {
+        attack += 10;
+        hp += 5;
+        initiative += 3;
+    }
 }

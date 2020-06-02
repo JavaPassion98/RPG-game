@@ -1,20 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rpg.game.characters;
 
-/**
- *
- * @author Krystian
- */
 public abstract class Player implements Cloneable {
     
     protected int attack;
     protected int hp;
     protected int initiative;
     protected int amountOfSkills = 10;
+    protected int xp = 0; 
+    protected int level = 1;  
 
     public Player(int attack, int hp, int initiative) {
         this.attack = attack;
@@ -33,6 +26,7 @@ public abstract class Player implements Cloneable {
     
     public abstract int criticalHit();
     public abstract int defence();
+    public abstract void promotion();
 
           public int getAttack() {
         return attack;
@@ -64,6 +58,22 @@ public abstract class Player implements Cloneable {
 
     public void setAmountOfSkills(int amountOfSkills) {
         this.amountOfSkills = amountOfSkills;
-    }        
+    }  
+    
+     public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+    
+     public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
   
 }

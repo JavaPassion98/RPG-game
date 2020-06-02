@@ -2,10 +2,6 @@ package rpg.game.characters;
 
 import java.util.Random;
 
-/**
- *
- * @author Krystian
- */
 public class Mage extends Player {
     
     public Mage(int attack, int hp, int initiative) {
@@ -24,6 +20,13 @@ public class Mage extends Player {
     @Override
     public int defence() {
         return 1;
+    }
+
+    @Override
+    public void promotion() {
+        attack += 20;
+        hp += 10;
+        initiative += 1;
     }
     
 }
