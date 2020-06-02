@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rpg.game;
 
 /**
@@ -11,7 +6,7 @@ package rpg.game;
  */
 public class CharacterCreation extends javax.swing.JFrame {
        
-    public static String chosenClass;              
+    public static String chosenClass;     
     
     public CharacterCreation() {
         this.setTitle("Stwórz postać");
@@ -207,7 +202,7 @@ public class CharacterCreation extends javax.swing.JFrame {
         warriorButton.setEnabled(false);
         mageButton.setEnabled(false);
         hunterButton.setEnabled(false);
-        chosenClass = "Wojownik";       
+        chosenClass = "Wojownik";           
     }//GEN-LAST:event_warriorButtonActionPerformed
 
     private void mageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageButtonActionPerformed
@@ -238,14 +233,6 @@ public class CharacterCreation extends javax.swing.JFrame {
             };
             this.setVisible(false);
             gameBoard.main(info);
-//            gameBoard.main(info);
-//            this.setVisible(false);
-//            java.awt.EventQueue.invokeLater(new Runnable() {
-//                @Override
-//                public void run() {
-//                    new gameBoard().setVisible(true);
-//                }
-//            });
         } else {
             warning.setText("Podaj nazwę i klasę!");
         }

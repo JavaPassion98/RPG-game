@@ -64,13 +64,10 @@
                                   <Component id="addInitiativeButton" min="-2" max="-2" attributes="0"/>
                                   <Component id="addHpButton" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="50" pref="224" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="skillpoints" min="-2" pref="208" max="-2" attributes="0"/>
-                              <EmptySpace pref="165" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="skillpoints" alignment="0" min="-2" pref="208" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="mage1Lev" min="-2" max="-2" attributes="0"/>
                           <Component id="mages" min="-2" pref="75" max="-2" attributes="0"/>
@@ -127,7 +124,7 @@
                           </Group>
                           <Component id="characterClass" min="-2" pref="149" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="109" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>

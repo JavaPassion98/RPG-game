@@ -9,7 +9,7 @@ package rpg.game.characters;
  *
  * @author Krystian
  */
-public class Player implements Cloneable{
+public abstract class Player implements Cloneable {
     
     protected int attack;
     protected int hp;
@@ -23,16 +23,18 @@ public class Player implements Cloneable{
     }
     
     public void attack(Player player, Player enemy) {
-        player.setHp(player.getHp() - enemy.getAttack());
+        player.setHp(player.getHp() - enemy.getAttack() * enemy.criticalHit() * player.defence());
     }    
     
     @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+    
+    public abstract int criticalHit();
+    public abstract int defence();
 
-
-    public int getAttack() {
+      public int getAttack() {
         return attack;
     }
 
@@ -62,8 +64,6 @@ public class Player implements Cloneable{
 
     public void setAmountOfSkills(int amountOfSkills) {
         this.amountOfSkills = amountOfSkills;
-    }
-    
-    
-
+    }        
+  
 }

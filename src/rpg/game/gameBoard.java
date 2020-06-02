@@ -366,7 +366,7 @@ public class gameBoard extends javax.swing.JFrame {
         {"Nowicjusz", "Giermek", "Leśniczy"}
     };
    
-    //methods definition
+    //methods definitions
     public void createEnemies() {
         magesArray = new Mage[]{
             new Mage(10, 50, 1),
@@ -396,12 +396,15 @@ public class gameBoard extends javax.swing.JFrame {
     private void createCharacter() {
         if(characterClass.getText().equals("Wojownik")) {
             player = new Warrior(10, 10, 0);
+            playerPicture.setIcon(new ImageIcon(getClass().getResource(resourceName[1])));
         }
         else if(characterClass.getText().equals("Mag")) {
             player = new Mage(10, 500, 0);
+            playerPicture.setIcon(new ImageIcon(getClass().getResource(resourceName[0])));
         }
         else if(characterClass.getText().equals("Tropiciel")) {
             player = new Hunter(10, 10, 0);
+            playerPicture.setIcon(new ImageIcon(getClass().getResource(resourceName[2])));
         }              
     }
     
@@ -480,6 +483,9 @@ public class gameBoard extends javax.swing.JFrame {
         mage1Lev.setEnabled(true);
         warrior1Lev.setEnabled(true);
         hunter1Lev.setEnabled(true);
+        addAttackButton.setEnabled(true);
+        addHpButton.setEnabled(true);
+        addInitiativeButton.setEnabled(true);
     }
     private void addSkillpoint() {
         player.setAmountOfSkills(player.getAmountOfSkills() + 1);
@@ -534,6 +540,7 @@ public class gameBoard extends javax.swing.JFrame {
                         playerProgressBar.setValue(0);
                         setProgressBars();
                         move = -move;  
+                        enablePreparingButtons();
                         infoAboutFightLabel.setText("informacje o walce");
                         timer.stop();
                     }
