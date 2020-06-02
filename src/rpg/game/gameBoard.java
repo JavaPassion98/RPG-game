@@ -336,7 +336,8 @@ public class gameBoard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Fields declaration
     private Player player;
     private Player enemy;
     public static String playerNameStr;
@@ -349,6 +350,7 @@ public class gameBoard extends javax.swing.JFrame {
     private static final int delay = 10;
     private Timer timer;
    
+    //methods definition
     public void createEnemies() {
         magesArray = new Mage[]{
             new Mage(10, 50, 1),
@@ -399,29 +401,41 @@ public class gameBoard extends javax.swing.JFrame {
         StringBuilder updateText = new StringBuilder("Pozostałe punkty umiejętności: "); 
         updateText.append(player.getAmountOfSkills());
         skillpoints.setText(updateText.toString());
+        
+        addAttackButton.setEnabled(true);
+        addHpButton.setEnabled(true);
+        addInitiativeButton.setEnabled(true);
     }
     
-    public void addSkillHandler(javax.swing.JLabel amountOfSkill) {
+    public void addSkillHandler(javax.swing.JLabel amountOfSkillLabel) {
         if(player.getAmountOfSkills() > 0) {
-            Integer amount = Integer.parseInt(amountOfSkill.getText()) + 1;
-            amountOfSkill.setText(amount.toString());
+            Integer amount = Integer.parseInt(amountOfSkillLabel.getText()) + 1;
+            amountOfSkillLabel.setText(amount.toString());
             
             player.setAmountOfSkills(player.getAmountOfSkills() - 1);
             updateSkillpoints();
-        }  
+        } 
+        if(player.getAmountOfSkills() == 0){
+            addAttackButton.setEnabled(false);
+            addHpButton.setEnabled(false);
+            addInitiativeButton.setEnabled(false);
+        }
     }
     
  
     private void addAttackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAttackButtonActionPerformed
-        addSkillHandler(numberOfAttackLabel);                                   
+        addSkillHandler(numberOfAttackLabel);
+        player.setAttack(player.getAttack() + 40);       
     }//GEN-LAST:event_addAttackButtonActionPerformed
 
     private void addHpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addHpButtonActionPerformed
-        addSkillHandler(numberOfHpLabel);       
+        addSkillHandler(numberOfHpLabel);   
+        player.setHp(player.getHp() + 10); 
     }//GEN-LAST:event_addHpButtonActionPerformed
 
     private void addInitiativeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addInitiativeButtonActionPerformed
-        addSkillHandler(numberOfInitiativeLabel);        
+        addSkillHandler(numberOfInitiativeLabel); 
+        player.setInitiative(player.getInitiative()+ 1); 
     }//GEN-LAST:event_addInitiativeButtonActionPerformed
 
     private void warrior1LevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warrior1LevActionPerformed
@@ -435,6 +449,10 @@ public class gameBoard extends javax.swing.JFrame {
         
     }//GEN-LAST:event_warrior1LevActionPerformed
 
+    private void addSkillpoint() {
+        player.setAmountOfSkills(player.getAmountOfSkills() + 1);
+        updateSkillpoints();
+    }
     private int getPriority() {
         if(player.getInitiative() >= enemy.getInitiative()) {
             return 10;
@@ -442,12 +460,12 @@ public class gameBoard extends javax.swing.JFrame {
         else return -10;
     }
     
-    ActionListener fightHandler(Player enemy) throws CloneNotSupportedException {        
+    ActionListener fightHandler() throws CloneNotSupportedException {        
         
         Player clonedPlayer = (Player)player.clone();
         Player clonedEnemy = (Player)enemy.clone();                
         
-        ActionListener taskPerformer = new ActionListener() {
+        ActionListener fightPerformer = new ActionListener() {
             int move = getPriority();
                                    
             @Override
@@ -462,7 +480,9 @@ public class gameBoard extends javax.swing.JFrame {
                     if(clonedEnemy.getHp() <= 0) {
                         enemyProgressBar.setValue(0);
                         setProgressBars();
-                        move = -move;                        
+                        move = -move;
+                        addSkillpoint();
+                        fightStart.setEnabled(true);
                         timer.stop();
                     }
                     enemyProgressBar.setValue(clonedEnemy.getHp());                    
@@ -476,7 +496,8 @@ public class gameBoard extends javax.swing.JFrame {
                     if(clonedPlayer.getHp() <= 0) {
                         playerProgressBar.setValue(0);
                         setProgressBars();
-                        move = -move;                        
+                        move = -move;  
+                        fightStart.setEnabled(true);
                         timer.stop();
                     }
                     playerProgressBar.setValue(clonedPlayer.getHp());
@@ -484,7 +505,7 @@ public class gameBoard extends javax.swing.JFrame {
                 }                                                  
             }
         };
-        return taskPerformer;
+        return fightPerformer;
     }
     
     private void mage1LevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mage1LevActionPerformed
@@ -509,10 +530,11 @@ public class gameBoard extends javax.swing.JFrame {
 
     private void fightStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fightStartActionPerformed
          try {
-            timer = new Timer(delay, fightHandler(enemy));
+            timer = new Timer(delay, fightHandler());
         } catch (CloneNotSupportedException ex) {
             Logger.getLogger(gameBoard.class.getName()).log(Level.SEVERE, null, ex);
         }
+        fightStart.setEnabled(false);
         timer.start();
     }//GEN-LAST:event_fightStartActionPerformed
 
