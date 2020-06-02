@@ -1,9 +1,5 @@
 package rpg.game;
 
-/**
- *
- * @author Krystian
- */
 public class CharacterCreation extends javax.swing.JFrame {
        
     public static String chosenClass;     
@@ -83,12 +79,6 @@ public class CharacterCreation extends javax.swing.JFrame {
         closeChangesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeChangesButtonActionPerformed(evt);
-            }
-        });
-
-        typeNameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                typeNameTextFieldActionPerformed(evt);
             }
         });
 
@@ -184,10 +174,6 @@ public class CharacterCreation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void typeNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeNameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_typeNameTextFieldActionPerformed
 
     private void closeChangesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeChangesButtonActionPerformed
         whatWasChosenLabel.setText("");

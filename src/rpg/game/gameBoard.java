@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rpg.game;
 
 import java.awt.event.ActionEvent;
@@ -16,15 +11,8 @@ import rpg.game.characters.Mage;
 import rpg.game.characters.Player;
 import rpg.game.characters.Warrior;
 
-/**
- *
- * @author Krystian
- */
 public class gameBoard extends javax.swing.JFrame {
-
-    /**
-     * Creates new form gameBoard
-     */
+  
     public gameBoard() {
         initComponents();
         playerName.setText(playerNameStr);
@@ -42,10 +30,6 @@ public class gameBoard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
-        jButton1 = new javax.swing.JButton();
-        buttonGroup1 = new javax.swing.ButtonGroup();
         attackLabel = new javax.swing.JLabel();
         HPLabel = new javax.swing.JLabel();
         initiativeLabel = new javax.swing.JLabel();
@@ -84,10 +68,8 @@ public class gameBoard extends javax.swing.JFrame {
         mageLev5 = new javax.swing.JButton();
         hunterLev5 = new javax.swing.JButton();
         warriorLev5 = new javax.swing.JButton();
-
-        jScrollPane1.setViewportView(jTree1);
-
-        jButton1.setText("jButton1");
+        expProgressBar = new javax.swing.JProgressBar();
+        levelLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -321,104 +303,99 @@ public class gameBoard extends javax.swing.JFrame {
             }
         });
 
+        expProgressBar.setMaximum(2000);
+
+        levelLabel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        levelLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        levelLabel.setText("Poziom 1");
+        levelLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(playerName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(playerPicture, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(playerProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(104, 104, 104)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(initiativeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(HPLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                                    .addComponent(attackLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(numberOfAttackLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
-                                    .addComponent(numberOfHpLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(numberOfInitiativeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ball, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(addAttackButton)
-                                    .addComponent(addInitiativeButton)
-                                    .addComponent(addHpButton)))
-                            .addComponent(skillpoints, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(mageLev1)
-                                        .addComponent(mages, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
+                                    .addComponent(enemyPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(warriorLev1)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(hunterLev1))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(warriors, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(hunters, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(mageLev2)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(warriorLev2)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(hunterLev2)))
+                                        .addComponent(enemyPlayerName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(enemyProgressBar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(mageLev3)
+                                .addComponent(fightStart, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(247, 247, 247))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(mages, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(warriorLev3)
+                                .addComponent(warriors, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(hunterLev3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(mageLev4)
-                                .addGap(18, 18, 18)
-                                .addComponent(warriorLev4)
-                                .addGap(18, 18, 18)
-                                .addComponent(hunterLev4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(mageLev5)
-                                .addGap(18, 18, 18)
-                                .addComponent(warriorLev5)
-                                .addGap(18, 18, 18)
-                                .addComponent(hunterLev5)))
-                        .addGap(44, 44, 44))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(playerName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(playerPicture, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(playerProgressBar, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE))
-                                .addGap(104, 104, 104)
+                                .addComponent(hunters, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(ball, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(68, 68, 68))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(fightStart, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(50, 50, 50)))
-                                        .addGap(197, 197, 197))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(enemyPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(enemyPlayerName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(enemyProgressBar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                            .addComponent(characterClass, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(109, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addComponent(infoAboutFightLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(mageLev1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(warriorLev1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(hunterLev1))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(mageLev2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(warriorLev2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(hunterLev2)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(mageLev3)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(warriorLev3)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(hunterLev3))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(mageLev4)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(warriorLev4)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(hunterLev4))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(mageLev5)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(warriorLev5)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(hunterLev5)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(infoAboutFightLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(initiativeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(HPLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(attackLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(numberOfAttackLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numberOfHpLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(numberOfInitiativeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addAttackButton)
+                            .addComponent(addInitiativeButton)
+                            .addComponent(addHpButton)))
+                    .addComponent(skillpoints, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(characterClass, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(expProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(levelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,28 +406,14 @@ public class gameBoard extends javax.swing.JFrame {
                     .addComponent(mages, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(hunters, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(warriors, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(numberOfAttackLabel)
-                                    .addComponent(attackLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(7, 7, 7))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(mageLev1)
-                                    .addComponent(warriorLev1)
-                                    .addComponent(hunterLev1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(addAttackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mageLev1)
+                            .addComponent(warriorLev1)
+                            .addComponent(hunterLev1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(mageLev2)
                             .addComponent(warriorLev2)
@@ -470,41 +433,58 @@ public class gameBoard extends javax.swing.JFrame {
                             .addComponent(mageLev5)
                             .addComponent(warriorLev5)
                             .addComponent(hunterLev5)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(addHpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(addInitiativeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(HPLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(numberOfHpLabel))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(initiativeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(numberOfInitiativeLabel)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(characterClass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(playerPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(playerProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(addHpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addInitiativeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                            .addComponent(numberOfAttackLabel)
+                                            .addComponent(attackLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(7, 7, 7))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(addAttackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(HPLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(numberOfHpLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(initiativeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(numberOfInitiativeLabel))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(levelLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(playerName))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(expProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(characterClass)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(ball)
+                        .addGap(114, 114, 114)
+                        .addComponent(fightStart, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(playerPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(playerProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(playerName))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(enemyPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(enemyProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(enemyPlayerName))
-                        .addComponent(ball)
-                        .addComponent(fightStart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(enemyPlayerName))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(infoAboutFightLabel)
-                .addContainerGap())
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -520,7 +500,7 @@ public class gameBoard extends javax.swing.JFrame {
     private Warrior[] warriorsArray;
     private Hunter[] huntersArray;
     
-    private static final int delay = 10;
+    private static final int delay = 15;
     private Timer timer;
     
     private final String[] resourceName = {
@@ -535,6 +515,10 @@ public class gameBoard extends javax.swing.JFrame {
         {"Adept", "Berserker", "Piotruś Pan"},
         {"Mistrz", "Bloody Night", "Legolas"},
         {"Arcymistrz", "Koszmar", "Galadriela"}
+    };
+    
+    private final int[] MAX_EXP = { 
+        2000, 3500, 6000, 9000, 11000, 14000, 29000, 50000, 100000
     };
    
     //methods definitions
@@ -617,7 +601,7 @@ public class gameBoard extends javax.swing.JFrame {
     private void addAttackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAttackButtonActionPerformed
         
         addSkillHandler(numberOfAttackLabel);
-        player.setAttack(player.getAttack() + 40);
+        player.setAttack(player.getAttack() + 5);
         
     }//GEN-LAST:event_addAttackButtonActionPerformed
 
@@ -637,10 +621,30 @@ public class gameBoard extends javax.swing.JFrame {
 
     private void warriorLev1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev1ActionPerformed
         
-        prepareFightHandler(resourceName[1], enemyName[0][1], "wojownik", 1, warriorsArray[0]);       
+        prepareFightHandler(resourceName[1], enemyName[0][1], "wojownik", 1, warriorsArray[0],250);       
         
     }//GEN-LAST:event_warriorLev1ActionPerformed
 
+    private void gainExperience() {
+        player.setXp(player.getXp() + enemy.getXp());
+        
+        if(player.getXp() >= expProgressBar.getMaximum()) {
+            expProgressBar.setMaximum(MAX_EXP[player.getLevel()]);
+            expProgressBar.setValue(0);
+            player.setLevel(player.getLevel() + 1);
+            levelLabel.setText(String.format("Poziom %d", player.getLevel()));
+            player.setXp(0);
+            player.setAmountOfSkills(player.getAmountOfSkills() + 5);
+            updateSkillpoints();            
+            player.promotion();
+            infoAboutFightLabel.setText("Awansowałeś na kolejny poziom! Otrzymujesz 5 punktów umiejętności");
+        }
+        
+        expProgressBar.setValue(player.getXp());
+        
+        
+    }
+    
     private void disableButtons() {
         addAttackButton.setEnabled(false);
         addHpButton.setEnabled(false);
@@ -719,8 +723,9 @@ public class gameBoard extends javax.swing.JFrame {
                         enemyProgressBar.setValue(0);
                         setProgressBars();
                         move = -move;
-                        addSkillpoint();                        
-                        infoAboutFightLabel.setText("informacje o walce");
+                        addSkillpoint();                         
+                        infoAboutFightLabel.setText("Wygrałeś walkę! Otrzymujesz punkt umiejętności i punkty doświadczenia");
+                        gainExperience();
                         timer.stop();
                         
                     }
@@ -737,7 +742,7 @@ public class gameBoard extends javax.swing.JFrame {
                         setProgressBars();
                         move = -move;  
                         enablePreparingButtons();
-                        infoAboutFightLabel.setText("informacje o walce");
+                        infoAboutFightLabel.setText("Przegrałeś walkę! Spróbuj jeszcze raz!");
                         timer.stop();
                     }
                     playerProgressBar.setValue(clonedPlayer.getHp());
@@ -748,24 +753,25 @@ public class gameBoard extends javax.swing.JFrame {
         return fightPerformer;
     }
     
-    private void prepareFightHandler(String resName, String enemyNameLocal, String className, int level,Player specificEnemy) {
+    private void prepareFightHandler(String resName, String enemyNameLocal, String className, int level,Player specificEnemy, int xp) {
         enemyPicture.setIcon(new ImageIcon(getClass().getResource(resName)));
         enemyPlayerName.setText(enemyNameLocal);        
         infoAboutFightLabel.setText(String.format("Twoim wrogiem będzie %s na %d poziomie! Naciśnij start!", className, level));
         fightStart.setEnabled(true);
         enemy = specificEnemy;
+        enemy.setXp(xp);
         setProgressBars(); 
     }
     
     private void mageLev1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev1ActionPerformed
         
-        prepareFightHandler(resourceName[0], enemyName[0][0], "mag", 1, magesArray[0]); 
+        prepareFightHandler(resourceName[0], enemyName[0][0], "mag", 1, magesArray[0], 200);        
         
     }//GEN-LAST:event_mageLev1ActionPerformed
 
     private void hunterLev1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev1ActionPerformed
         
-        prepareFightHandler(resourceName[2], enemyName[0][2], "tropiciel", 1, huntersArray[0]);  
+        prepareFightHandler(resourceName[2], enemyName[0][2], "tropiciel", 1, huntersArray[0], 300);  
         
     }//GEN-LAST:event_hunterLev1ActionPerformed
 
@@ -783,73 +789,73 @@ public class gameBoard extends javax.swing.JFrame {
 
     private void mageLev2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev2ActionPerformed
         
-        prepareFightHandler(resourceName[0], enemyName[1][0], "mag", 2, magesArray[1]); 
+        prepareFightHandler(resourceName[0], enemyName[1][0], "mag", 2, magesArray[1], 500); 
         
     }//GEN-LAST:event_mageLev2ActionPerformed
 
     private void hunterLev2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev2ActionPerformed
         
-        prepareFightHandler(resourceName[2], enemyName[1][2], "tropiciel", 2, huntersArray[1]); 
+        prepareFightHandler(resourceName[2], enemyName[1][2], "tropiciel", 2, huntersArray[1], 600); 
         
     }//GEN-LAST:event_hunterLev2ActionPerformed
 
     private void warriorLev2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev2ActionPerformed
         
-        prepareFightHandler(resourceName[1], enemyName[1][1], "wojownik", 2, warriorsArray[1]); 
+        prepareFightHandler(resourceName[1], enemyName[1][1], "wojownik", 2, warriorsArray[1], 550); 
         
     }//GEN-LAST:event_warriorLev2ActionPerformed
 
     private void mageLev3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev3ActionPerformed
         
-        prepareFightHandler(resourceName[0], enemyName[2][0], "mag", 3, magesArray[2]); 
+        prepareFightHandler(resourceName[0], enemyName[2][0], "mag", 3, magesArray[2], 800); 
         
     }//GEN-LAST:event_mageLev3ActionPerformed
 
     private void hunterLev3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev3ActionPerformed
         
-        prepareFightHandler(resourceName[2], enemyName[2][2], "tropiciel", 3, huntersArray[2]); 
+        prepareFightHandler(resourceName[2], enemyName[2][2], "tropiciel", 3, huntersArray[2],1000); 
         
     }//GEN-LAST:event_hunterLev3ActionPerformed
 
     private void warriorLev3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev3ActionPerformed
        
-        prepareFightHandler(resourceName[1], enemyName[2][1], "wojownik", 3, warriorsArray[2]);
+        prepareFightHandler(resourceName[1], enemyName[2][1], "wojownik", 3, warriorsArray[2], 1000);
         
     }//GEN-LAST:event_warriorLev3ActionPerformed
 
     private void mageLev4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev4ActionPerformed
         
-        prepareFightHandler(resourceName[0], enemyName[3][0], "mag", 4, magesArray[3]); 
+        prepareFightHandler(resourceName[0], enemyName[3][0], "mag", 4, magesArray[3], 1500); 
         
     }//GEN-LAST:event_mageLev4ActionPerformed
 
     private void hunterLev4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev4ActionPerformed
        
-        prepareFightHandler(resourceName[2], enemyName[3][2], "tropiciel", 4, huntersArray[3]); 
+        prepareFightHandler(resourceName[2], enemyName[3][2], "tropiciel", 4, huntersArray[3],2300); 
         
     }//GEN-LAST:event_hunterLev4ActionPerformed
 
     private void warriorLev4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev4ActionPerformed
         
-        prepareFightHandler(resourceName[1], enemyName[3][1], "wojownik", 4, warriorsArray[3]);
+        prepareFightHandler(resourceName[1], enemyName[3][1], "wojownik", 4, warriorsArray[3],2200);
         
     }//GEN-LAST:event_warriorLev4ActionPerformed
 
     private void mageLev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev5ActionPerformed
         
-        prepareFightHandler(resourceName[0], enemyName[4][0], "mag", 5, magesArray[4]);
+        prepareFightHandler(resourceName[0], enemyName[4][0], "mag", 5, magesArray[4], 3000);
         
     }//GEN-LAST:event_mageLev5ActionPerformed
 
     private void hunterLev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev5ActionPerformed
         
-        prepareFightHandler(resourceName[2], enemyName[4][2], "tropiciel", 5, huntersArray[4]); 
+        prepareFightHandler(resourceName[2], enemyName[4][2], "tropiciel", 5, huntersArray[4], 4000); 
         
     }//GEN-LAST:event_hunterLev5ActionPerformed
 
     private void warriorLev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev5ActionPerformed
        
-        prepareFightHandler(resourceName[1], enemyName[4][1], "wojownik", 5, warriorsArray[4]);
+        prepareFightHandler(resourceName[1], enemyName[4][1], "wojownik", 5, warriorsArray[4], 3500);
         
     }//GEN-LAST:event_warriorLev5ActionPerformed
 
@@ -894,11 +900,11 @@ public class gameBoard extends javax.swing.JFrame {
     private javax.swing.JButton addInitiativeButton;
     private javax.swing.JLabel attackLabel;
     private javax.swing.JLabel ball;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel characterClass;
     private javax.swing.JLabel enemyPicture;
     private javax.swing.JLabel enemyPlayerName;
     private javax.swing.JProgressBar enemyProgressBar;
+    private javax.swing.JProgressBar expProgressBar;
     private javax.swing.JButton fightStart;
     private javax.swing.JButton hunterLev1;
     private javax.swing.JButton hunterLev2;
@@ -908,9 +914,7 @@ public class gameBoard extends javax.swing.JFrame {
     private javax.swing.JLabel hunters;
     private javax.swing.JLabel infoAboutFightLabel;
     private javax.swing.JLabel initiativeLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTree jTree1;
+    private javax.swing.JLabel levelLabel;
     private javax.swing.JButton mageLev1;
     private javax.swing.JButton mageLev2;
     private javax.swing.JButton mageLev3;
