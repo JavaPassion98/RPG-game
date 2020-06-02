@@ -45,6 +45,7 @@ public class gameBoard extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTree1 = new javax.swing.JTree();
         jButton1 = new javax.swing.JButton();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         attackLabel = new javax.swing.JLabel();
         HPLabel = new javax.swing.JLabel();
         initiativeLabel = new javax.swing.JLabel();
@@ -61,9 +62,9 @@ public class gameBoard extends javax.swing.JFrame {
         enemyPicture = new javax.swing.JLabel();
         playerName = new javax.swing.JLabel();
         enemyPlayerName = new javax.swing.JLabel();
-        mage1Lev = new javax.swing.JButton();
-        hunter1Lev = new javax.swing.JButton();
-        warrior1Lev = new javax.swing.JButton();
+        mageLev1 = new javax.swing.JButton();
+        hunterLev1 = new javax.swing.JButton();
+        warriorLev1 = new javax.swing.JButton();
         mages = new javax.swing.JLabel();
         hunters = new javax.swing.JLabel();
         warriors = new javax.swing.JLabel();
@@ -71,6 +72,18 @@ public class gameBoard extends javax.swing.JFrame {
         ball = new javax.swing.JLabel();
         fightStart = new javax.swing.JButton();
         infoAboutFightLabel = new javax.swing.JLabel();
+        mageLev2 = new javax.swing.JButton();
+        hunterLev2 = new javax.swing.JButton();
+        warriorLev2 = new javax.swing.JButton();
+        mageLev3 = new javax.swing.JButton();
+        hunterLev3 = new javax.swing.JButton();
+        warriorLev3 = new javax.swing.JButton();
+        mageLev4 = new javax.swing.JButton();
+        hunterLev4 = new javax.swing.JButton();
+        warriorLev4 = new javax.swing.JButton();
+        mageLev5 = new javax.swing.JButton();
+        hunterLev5 = new javax.swing.JButton();
+        warriorLev5 = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jTree1);
 
@@ -137,30 +150,30 @@ public class gameBoard extends javax.swing.JFrame {
         enemyPlayerName.setText("Wróg");
         enemyPlayerName.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        mage1Lev.setBackground(new java.awt.Color(255, 51, 51));
-        mage1Lev.setText("Poziom 1");
-        mage1Lev.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        mage1Lev.addActionListener(new java.awt.event.ActionListener() {
+        mageLev1.setBackground(new java.awt.Color(255, 51, 51));
+        mageLev1.setText("Poziom 1");
+        mageLev1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mageLev1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mage1LevActionPerformed(evt);
+                mageLev1ActionPerformed(evt);
             }
         });
 
-        hunter1Lev.setBackground(new java.awt.Color(0, 204, 102));
-        hunter1Lev.setText("Poziom 1");
-        hunter1Lev.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hunter1Lev.addActionListener(new java.awt.event.ActionListener() {
+        hunterLev1.setBackground(new java.awt.Color(0, 204, 102));
+        hunterLev1.setText("Poziom 1");
+        hunterLev1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hunterLev1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hunter1LevActionPerformed(evt);
+                hunterLev1ActionPerformed(evt);
             }
         });
 
-        warrior1Lev.setBackground(new java.awt.Color(255, 153, 51));
-        warrior1Lev.setText("Poziom 1");
-        warrior1Lev.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        warrior1Lev.addActionListener(new java.awt.event.ActionListener() {
+        warriorLev1.setBackground(new java.awt.Color(255, 153, 51));
+        warriorLev1.setText("Poziom 1");
+        warriorLev1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warriorLev1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warrior1LevActionPerformed(evt);
+                warriorLev1ActionPerformed(evt);
             }
         });
 
@@ -200,6 +213,114 @@ public class gameBoard extends javax.swing.JFrame {
         infoAboutFightLabel.setText("informacje o walce");
         infoAboutFightLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        mageLev2.setBackground(new java.awt.Color(255, 51, 51));
+        mageLev2.setText("Poziom 2");
+        mageLev2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mageLev2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mageLev2ActionPerformed(evt);
+            }
+        });
+
+        hunterLev2.setBackground(new java.awt.Color(0, 204, 102));
+        hunterLev2.setText("Poziom 2");
+        hunterLev2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hunterLev2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hunterLev2ActionPerformed(evt);
+            }
+        });
+
+        warriorLev2.setBackground(new java.awt.Color(255, 153, 51));
+        warriorLev2.setText("Poziom 2");
+        warriorLev2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warriorLev2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                warriorLev2ActionPerformed(evt);
+            }
+        });
+
+        mageLev3.setBackground(new java.awt.Color(255, 51, 51));
+        mageLev3.setText("Poziom 3");
+        mageLev3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mageLev3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mageLev3ActionPerformed(evt);
+            }
+        });
+
+        hunterLev3.setBackground(new java.awt.Color(0, 204, 102));
+        hunterLev3.setText("Poziom 3");
+        hunterLev3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hunterLev3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hunterLev3ActionPerformed(evt);
+            }
+        });
+
+        warriorLev3.setBackground(new java.awt.Color(255, 153, 51));
+        warriorLev3.setText("Poziom 3");
+        warriorLev3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warriorLev3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                warriorLev3ActionPerformed(evt);
+            }
+        });
+
+        mageLev4.setBackground(new java.awt.Color(255, 51, 51));
+        mageLev4.setText("Poziom 4");
+        mageLev4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mageLev4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mageLev4ActionPerformed(evt);
+            }
+        });
+
+        hunterLev4.setBackground(new java.awt.Color(0, 204, 102));
+        hunterLev4.setText("Poziom 4");
+        hunterLev4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hunterLev4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hunterLev4ActionPerformed(evt);
+            }
+        });
+
+        warriorLev4.setBackground(new java.awt.Color(255, 153, 51));
+        warriorLev4.setText("Poziom 4");
+        warriorLev4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warriorLev4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                warriorLev4ActionPerformed(evt);
+            }
+        });
+
+        mageLev5.setBackground(new java.awt.Color(255, 51, 51));
+        mageLev5.setText("Poziom 5");
+        mageLev5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        mageLev5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mageLev5ActionPerformed(evt);
+            }
+        });
+
+        hunterLev5.setBackground(new java.awt.Color(0, 204, 102));
+        hunterLev5.setText("Poziom 5");
+        hunterLev5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hunterLev5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hunterLev5ActionPerformed(evt);
+            }
+        });
+
+        warriorLev5.setBackground(new java.awt.Color(255, 153, 51));
+        warriorLev5.setText("Poziom 5");
+        warriorLev5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        warriorLev5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                warriorLev5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -223,24 +344,49 @@ public class gameBoard extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(addAttackButton)
                                     .addComponent(addInitiativeButton)
-                                    .addComponent(addHpButton))
-                                .addGap(50, 224, Short.MAX_VALUE))
+                                    .addComponent(addHpButton)))
+                            .addComponent(skillpoints, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(mageLev1)
+                                        .addComponent(mages, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(warriorLev1)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(hunterLev1))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(warriors, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(hunters, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(mageLev2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(warriorLev2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(hunterLev2)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(skillpoints, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(mage1Lev)
-                            .addComponent(mages, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(warrior1Lev)
+                                .addComponent(mageLev3)
                                 .addGap(18, 18, 18)
-                                .addComponent(hunter1Lev))
+                                .addComponent(warriorLev3)
+                                .addGap(18, 18, 18)
+                                .addComponent(hunterLev3))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(warriors, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(hunters, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(mageLev4)
+                                .addGap(18, 18, 18)
+                                .addComponent(warriorLev4)
+                                .addGap(18, 18, 18)
+                                .addComponent(hunterLev4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(mageLev5)
+                                .addGap(18, 18, 18)
+                                .addComponent(warriorLev5)
+                                .addGap(18, 18, 18)
+                                .addComponent(hunterLev5)))
                         .addGap(44, 44, 44))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -268,7 +414,7 @@ public class gameBoard extends javax.swing.JFrame {
                                                 .addComponent(enemyPlayerName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(enemyProgressBar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                             .addComponent(characterClass, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(109, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(154, 154, 154)
                 .addComponent(infoAboutFightLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -295,30 +441,51 @@ public class gameBoard extends javax.swing.JFrame {
                                 .addGap(7, 7, 7))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(mage1Lev)
-                                    .addComponent(warrior1Lev)
-                                    .addComponent(hunter1Lev))
+                                    .addComponent(mageLev1)
+                                    .addComponent(warriorLev1)
+                                    .addComponent(hunterLev1))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(addAttackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(addHpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(addInitiativeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(numberOfHpLabel)
-                            .addComponent(HPLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mageLev2)
+                            .addComponent(warriorLev2)
+                            .addComponent(hunterLev2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(initiativeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numberOfInitiativeLabel))))
-                .addGap(62, 62, 62)
+                            .addComponent(mageLev3)
+                            .addComponent(warriorLev3)
+                            .addComponent(hunterLev3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mageLev4)
+                            .addComponent(warriorLev4)
+                            .addComponent(hunterLev4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mageLev5)
+                            .addComponent(warriorLev5)
+                            .addComponent(hunterLev5)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(addHpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(addInitiativeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(HPLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(numberOfHpLabel))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(initiativeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(numberOfInitiativeLabel)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(characterClass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(playerPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -363,7 +530,11 @@ public class gameBoard extends javax.swing.JFrame {
     };
     
     private final String[][] enemyName = {
-        {"Nowicjusz", "Giermek", "Leśniczy"}
+        {"Nowicjusz", "Giermek", "Leśniczy"},
+        {"Uczeń", "Rycerz", "Łucznik"},
+        {"Adept", "Berserker", "Piotruś Pan"},
+        {"Mistrz", "Bloody Night", "Legolas"},
+        {"Arcymistrz", "Koszmar", "Galadriela"}
     };
    
     //methods definitions
@@ -399,7 +570,7 @@ public class gameBoard extends javax.swing.JFrame {
             playerPicture.setIcon(new ImageIcon(getClass().getResource(resourceName[1])));
         }
         else if(characterClass.getText().equals("Mag")) {
-            player = new Mage(10, 500, 0);
+            player = new Mage(10, 10, 0);
             playerPicture.setIcon(new ImageIcon(getClass().getResource(resourceName[0])));
         }
         else if(characterClass.getText().equals("Tropiciel")) {
@@ -464,28 +635,53 @@ public class gameBoard extends javax.swing.JFrame {
         
     }//GEN-LAST:event_addInitiativeButtonActionPerformed
 
-    private void warrior1LevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warrior1LevActionPerformed
+    private void warriorLev1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev1ActionPerformed
         
         prepareFightHandler(resourceName[1], enemyName[0][1], "wojownik", 1, warriorsArray[0]);       
         
-    }//GEN-LAST:event_warrior1LevActionPerformed
+    }//GEN-LAST:event_warriorLev1ActionPerformed
 
     private void disableButtons() {
         addAttackButton.setEnabled(false);
         addHpButton.setEnabled(false);
         addInitiativeButton.setEnabled(false);
-        mage1Lev.setEnabled(false);
-        warrior1Lev.setEnabled(false);
-        hunter1Lev.setEnabled(false);
+        mageLev1.setEnabled(false);
+        warriorLev1.setEnabled(false);
+        hunterLev1.setEnabled(false);
+        mageLev2.setEnabled(false);
+        warriorLev2.setEnabled(false);
+        hunterLev2.setEnabled(false);
+        mageLev3.setEnabled(false);
+        warriorLev3.setEnabled(false);
+        hunterLev3.setEnabled(false);
+        mageLev4.setEnabled(false);
+        hunterLev4.setEnabled(false);
+        warriorLev4.setEnabled(false);       
+        mageLev5.setEnabled(false);
+        warriorLev5.setEnabled(false);
+        hunterLev5.setEnabled(false);
+        
     }
     
-    private void enablePreparingButtons() {
-        mage1Lev.setEnabled(true);
-        warrior1Lev.setEnabled(true);
-        hunter1Lev.setEnabled(true);
+    private void enablePreparingButtons() {        
         addAttackButton.setEnabled(true);
         addHpButton.setEnabled(true);
         addInitiativeButton.setEnabled(true);
+        mageLev1.setEnabled(true);
+        warriorLev1.setEnabled(true);
+        hunterLev1.setEnabled(true);
+        mageLev2.setEnabled(true);
+        warriorLev2.setEnabled(true);
+        hunterLev2.setEnabled(true);
+        mageLev3.setEnabled(true);
+        warriorLev3.setEnabled(true);
+        hunterLev3.setEnabled(true);
+        mageLev4.setEnabled(true);
+        warriorLev4.setEnabled(true);
+        hunterLev4.setEnabled(true);
+        mageLev5.setEnabled(true);
+        warriorLev5.setEnabled(true);
+        hunterLev5.setEnabled(true);
     }
     private void addSkillpoint() {
         player.setAmountOfSkills(player.getAmountOfSkills() + 1);
@@ -561,17 +757,17 @@ public class gameBoard extends javax.swing.JFrame {
         setProgressBars(); 
     }
     
-    private void mage1LevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mage1LevActionPerformed
+    private void mageLev1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev1ActionPerformed
         
         prepareFightHandler(resourceName[0], enemyName[0][0], "mag", 1, magesArray[0]); 
         
-    }//GEN-LAST:event_mage1LevActionPerformed
+    }//GEN-LAST:event_mageLev1ActionPerformed
 
-    private void hunter1LevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunter1LevActionPerformed
+    private void hunterLev1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev1ActionPerformed
         
         prepareFightHandler(resourceName[2], enemyName[0][2], "tropiciel", 1, huntersArray[0]);  
         
-    }//GEN-LAST:event_hunter1LevActionPerformed
+    }//GEN-LAST:event_hunterLev1ActionPerformed
 
     private void fightStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fightStartActionPerformed
         
@@ -584,6 +780,78 @@ public class gameBoard extends javax.swing.JFrame {
         timer.start();
         
     }//GEN-LAST:event_fightStartActionPerformed
+
+    private void mageLev2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev2ActionPerformed
+        
+        prepareFightHandler(resourceName[0], enemyName[1][0], "mag", 2, magesArray[1]); 
+        
+    }//GEN-LAST:event_mageLev2ActionPerformed
+
+    private void hunterLev2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev2ActionPerformed
+        
+        prepareFightHandler(resourceName[2], enemyName[1][2], "tropiciel", 2, huntersArray[1]); 
+        
+    }//GEN-LAST:event_hunterLev2ActionPerformed
+
+    private void warriorLev2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev2ActionPerformed
+        
+        prepareFightHandler(resourceName[1], enemyName[1][1], "wojownik", 2, warriorsArray[1]); 
+        
+    }//GEN-LAST:event_warriorLev2ActionPerformed
+
+    private void mageLev3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev3ActionPerformed
+        
+        prepareFightHandler(resourceName[0], enemyName[2][0], "mag", 3, magesArray[2]); 
+        
+    }//GEN-LAST:event_mageLev3ActionPerformed
+
+    private void hunterLev3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev3ActionPerformed
+        
+        prepareFightHandler(resourceName[2], enemyName[2][2], "tropiciel", 3, huntersArray[2]); 
+        
+    }//GEN-LAST:event_hunterLev3ActionPerformed
+
+    private void warriorLev3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev3ActionPerformed
+       
+        prepareFightHandler(resourceName[1], enemyName[2][1], "wojownik", 3, warriorsArray[2]);
+        
+    }//GEN-LAST:event_warriorLev3ActionPerformed
+
+    private void mageLev4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev4ActionPerformed
+        
+        prepareFightHandler(resourceName[0], enemyName[3][0], "mag", 4, magesArray[3]); 
+        
+    }//GEN-LAST:event_mageLev4ActionPerformed
+
+    private void hunterLev4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev4ActionPerformed
+       
+        prepareFightHandler(resourceName[2], enemyName[3][2], "tropiciel", 4, huntersArray[3]); 
+        
+    }//GEN-LAST:event_hunterLev4ActionPerformed
+
+    private void warriorLev4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev4ActionPerformed
+        
+        prepareFightHandler(resourceName[1], enemyName[3][1], "wojownik", 4, warriorsArray[3]);
+        
+    }//GEN-LAST:event_warriorLev4ActionPerformed
+
+    private void mageLev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mageLev5ActionPerformed
+        
+        prepareFightHandler(resourceName[0], enemyName[4][0], "mag", 5, magesArray[4]);
+        
+    }//GEN-LAST:event_mageLev5ActionPerformed
+
+    private void hunterLev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hunterLev5ActionPerformed
+        
+        prepareFightHandler(resourceName[2], enemyName[4][2], "tropiciel", 5, huntersArray[4]); 
+        
+    }//GEN-LAST:event_hunterLev5ActionPerformed
+
+    private void warriorLev5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warriorLev5ActionPerformed
+       
+        prepareFightHandler(resourceName[1], enemyName[4][1], "wojownik", 5, warriorsArray[4]);
+        
+    }//GEN-LAST:event_warriorLev5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -626,19 +894,28 @@ public class gameBoard extends javax.swing.JFrame {
     private javax.swing.JButton addInitiativeButton;
     private javax.swing.JLabel attackLabel;
     private javax.swing.JLabel ball;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel characterClass;
     private javax.swing.JLabel enemyPicture;
     private javax.swing.JLabel enemyPlayerName;
     private javax.swing.JProgressBar enemyProgressBar;
     private javax.swing.JButton fightStart;
-    private javax.swing.JButton hunter1Lev;
+    private javax.swing.JButton hunterLev1;
+    private javax.swing.JButton hunterLev2;
+    private javax.swing.JButton hunterLev3;
+    private javax.swing.JButton hunterLev4;
+    private javax.swing.JButton hunterLev5;
     private javax.swing.JLabel hunters;
     private javax.swing.JLabel infoAboutFightLabel;
     private javax.swing.JLabel initiativeLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree1;
-    private javax.swing.JButton mage1Lev;
+    private javax.swing.JButton mageLev1;
+    private javax.swing.JButton mageLev2;
+    private javax.swing.JButton mageLev3;
+    private javax.swing.JButton mageLev4;
+    private javax.swing.JButton mageLev5;
     private javax.swing.JLabel mages;
     private javax.swing.JLabel numberOfAttackLabel;
     private javax.swing.JLabel numberOfHpLabel;
@@ -647,7 +924,11 @@ public class gameBoard extends javax.swing.JFrame {
     private javax.swing.JLabel playerPicture;
     private javax.swing.JProgressBar playerProgressBar;
     private javax.swing.JLabel skillpoints;
-    private javax.swing.JButton warrior1Lev;
+    private javax.swing.JButton warriorLev1;
+    private javax.swing.JButton warriorLev2;
+    private javax.swing.JButton warriorLev3;
+    private javax.swing.JButton warriorLev4;
+    private javax.swing.JButton warriorLev5;
     private javax.swing.JLabel warriors;
     // End of variables declaration//GEN-END:variables
 }

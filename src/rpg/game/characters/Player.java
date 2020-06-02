@@ -34,7 +34,7 @@ public abstract class Player implements Cloneable {
     public abstract int criticalHit();
     public abstract int defence();
 
-      public int getAttack() {
+          public int getAttack() {
         return attack;
     }
 
